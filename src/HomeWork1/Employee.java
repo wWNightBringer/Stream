@@ -4,7 +4,9 @@ import java.time.LocalDate;
 
 
 public class Employee {
-   private String name,surname,patronymic;
+    private String name;
+    private String surname;
+    private String patronymic;
     private LocalDate birthday;
     private int INN;
     private Sex sex;
@@ -13,10 +15,6 @@ public class Employee {
     private int earn;
 
 
-
-    enum Sex{
-        MALE,FEMALE
-    }
     public Employee(String name, String surname, String patronymic,
                     LocalDate birthday, int INN, Sex sex, LocalDate dateOfWorkUp, LocalDate dateOfWorkDown, int earn) {
         this.name = name;
@@ -100,5 +98,9 @@ public class Employee {
 
     public void setEarn(int earn) {
         this.earn = earn;
+    }
+
+    public enum Sex {
+        MALE, FEMALE
     }
 }
